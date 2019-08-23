@@ -48,6 +48,9 @@ class App extends Component {
 
         if (this.state.op1 === '0') {
           newV = i;
+        } else if (this.state.op1 === this.state.screenValue) {
+          // after "=" is clicked, then press number for the next calculation
+          newV = i;
         } else {
           newV = this.state.op1 + i;
         }
@@ -65,7 +68,7 @@ class App extends Component {
 
         this.setState({ screenValue: newV, op2: newV });
       }
-    } else if ("+-x/".indexOf(i) !== -1) { 
+    } else if ("+-x/".indexOf(i) !== -1) {
       //if "+-*/" is clicked
       if (this.state.op2 === null) {
         this.setState({ opr: i });
