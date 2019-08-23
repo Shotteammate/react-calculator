@@ -4,24 +4,15 @@ import './PanelRow.css';
 
 export class PanelRow extends Component {
   render() {
-    let value = this.props.value;
-    //console.log(value);
+    // Keys help React identify which items have changed, are added, or are removed.
+    let buttonList = this.props.value.map(button => <Button value={button} key={button} />); 
 
     return (
-      value[3] !== '' ?
-        <div className='panelRowStyle'>
-          <Button value={value[0]} />
-          <Button value={value[1]} />
-          <Button value={value[2]} />
-          <Button value={value[3]} />
-        </div> :
-        <div className='panelRowStyle'>
-          <Button value={value[0]} />
-          <Button value={value[1]} />
-          <Button value={value[2]} />
-        </div>
-    )
+      <div className="panelRowStyle">
+        {buttonList}
+      </div>
+    );
   }
 }
 
-export default PanelRow
+export default PanelRow;

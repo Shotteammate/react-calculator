@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Screen.css'
 
 export class Screen extends Component {
   render() {
     return (
       <div className='screenStyle'>
-        <input type="text" value={this.props.value}/>
+        <div className='valueStyle'>{this.props.value}</div>
       </div>
-    )
+    );
   }
 }
 
-export default Screen
+export default Screen;

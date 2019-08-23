@@ -9,7 +9,7 @@ export class Panel extends Component {
         <PanelRow value={['7' , '8', '9', 'X']}/>
         <PanelRow value={['4' , '5', '6', '-']}/>
         <PanelRow value={['1' , '2', '3', '+']}/>
-        <PanelRow value={['0' , '.', '=', '']}/>
+        <PanelRow value={['0' , '.', '=']}/>
       </div>
     )
   }
