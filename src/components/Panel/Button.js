@@ -18,6 +18,7 @@ export class Button extends Component {
     return (
       <button 
         className={className} 
+        //Pass onClick info. from to (parent) by callback function (using inverse data flow)
         onClick={() => this.props.handleClickCallback(this.props.value)}>
         {this.props.value}
       </button>
