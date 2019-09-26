@@ -48,9 +48,6 @@ class App extends Component {
 
         if (this.state.op1 === '0') {
           newV = i;
-        } else if (this.state.op1 === this.state.screenValue) {
-          // after "=" is clicked, then press number for the next calculation
-          newV = i;
         } else {
           newV = this.state.op1 + i;
         }
